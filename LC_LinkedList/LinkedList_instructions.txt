@@ -1,0 +1,229 @@
+LL: Constructor
+You are tasked with implementing a basic data structure: a singly linked list.
+
+To accomplish this, you will create two classes, Node and LinkedList.
+
+The Node class will represent an individual node within the linked list, while the LinkedList class will manage the overall list structure.
+
+Your implementation should satisfy the following requirements:
+
+
+
+Create a Node class with the following features:
+
+A constructor that takes a value as an argument and initializes the value attribute of the node.
+
+A next attribute, initialized to None, which will store a reference to the next node in the list.
+
+Create a LinkedList class with the following features:
+
+A constructor that takes a value as an argument, creates a new Node with that value, and initializes the head and tail attributes of the linked list to point to the new node.
+
+A length attribute, initialized to 1, which represents the current number of nodes in the list.
+
+~~~~~~~~~~~~~~~~~~~~
+
+LL: Print List
+Implement a method print_list(self) that prints the linked list's elements, one per line.
+
+~~~~~~~~~~~~~~~~~~~~
+
+LL: Append
+Implement the append method for the LinkedList class.
+
+The append method should add a new node with a given value to the end of the linked list, updating the tail attribute and the length attribute accordingly.
+
+
+
+Keep in mind the following requirements:
+
+
+
+The method should handle the cases where the list is empty and where the list already has one or more nodes.
+
+The method should create a new node with the given value and add it to the end of the list.
+
+The method should update the tail attribute of the LinkedList correctly.
+
+The method should update the length attribute of the LinkedList to reflect the addition of the new node.
+
+~~~~~~~~~~~~~~~~~~~~
+LL: Pop
+Your task is to implement the pop method for the LinkedList class.
+
+The pop method should remove the last node (tail) from the linked list and return the removed node. If the list is empty, the method should return None.
+
+After the last node is removed, the second-to-last node should become the new tail of the list.
+
+Additionally, if the list becomes empty after the pop operation, both the head and tail attributes should be set to None.
+
+
+
+Keep in mind the following requirements:
+
+
+
+The method should handle the cases where the list is empty, has only one node, or has multiple nodes.
+
+The method should update the tail attribute of the LinkedList correctly.
+
+The method should update the length attribute of the LinkedList to reflect the removal of the node.
+
+The method should either return the removed node or None if the list is empty.
+~~~~~~~~~~~~~~~~~~~~
+LL: Prepend
+Implement the prepend method for the LinkedList class.
+
+The prepend method should add a new node with a given value to the beginning of the linked list, updating the head attribute and the length attribute accordingly.
+
+Keep in mind the following requirements:
+
+
+
+The method should handle the cases where the list is empty and where the list already has one or more nodes.
+
+The method should create a new node with the given value and add it to the beginning of the list.
+
+The method should update the head attribute of the LinkedList correctly.
+
+The method should update the length attribute of the LinkedList to reflect the addition of the new node.
+
+The method should return True if the operation is successful.
+~~~~~~~~~~~~~~~~~~~~
+LL: Pop First
+Implement the pop_first method for the LinkedList class.
+
+The pop_first method should remove the first node (the head) from the linked list, update the head attribute and the length attribute accordingly, and return the removed node.
+
+Keep in mind the following requirements:
+
+
+
+The method should handle the cases where the list is empty and where the list has one or more nodes.
+
+The method should save a reference to the current head node before updating the head attribute.
+
+The method should update the head attribute to the second node in the list.
+
+The method should disconnect the removed node from the list by setting its next attribute to None.
+
+The method should update the length attribute of the LinkedList to reflect the removal of the node.
+
+If the list becomes empty after removing the node, the method should set the tail attribute of the LinkedList to None.
+
+The method should return the removed node, or None if the list is empty.
+
+
+~~~~~~~~~~~~~~~~~~~~
+LL: Get
+Implement the get method for the LinkedList class.
+
+The get method should take an integer index as a parameter and return a pointer to the node at the specified index in the linked list.
+
+If the index is out of bounds (less than 0 or greater than or equal to the length of the list), the method should return None.
+
+Keep in mind the following requirements:
+
+
+
+The method should handle the cases where the index is out of bounds.
+
+The method should start at the head of the list and traverse the list using the next attribute of the nodes.
+
+The method should stop traversing the list when it reaches the specified index and return the node at that position.
+
+If the index is out of bounds, the method should return None.
+
+
+~~~~~~~~~~~~~~~~~~~~
+LL: Set
+Implement the set_value method for the LinkedList class.
+
+The set_value method should take an integer index and a value as parameters and update the value of the node at the specified index in the linked list.
+
+If the index is out of bounds, the method should return False. If the value is successfully updated, the method should return True.
+
+Keep in mind the following requirements:
+
+The method should utilize the get method to find the node at the specified index.
+
+The method should update the value of the node if the node is found.
+
+The method should return True if the value is successfully updated.
+
+If the node is not found (i.e., the index is out of bounds), the method should return False.
+
+
+~~~~~~~~~~~~~~~~~~~~
+LL: Insert
+Implement the insert method for the LinkedList class.
+
+Method signature: def insert(self, index, value):
+
+The insert method should take an integer index and a value as parameters and insert a new node with the given value at the specified index in the linked list.
+
+If the index is out of bounds, the method should return False. If the new node is successfully inserted, the method should return True.
+
+Keep in mind the following requirements:
+
+The method should handle edge cases, such as inserting a new node at the beginning or end of the list.
+
+The method should utilize the prepend, append, and get methods for handling these edge cases.
+
+The method should create a new node with the given value and insert it at the specified index.
+
+The method should update the next attribute of the previous node to point to the new node.
+
+The method should increment the length attribute of the LinkedList class.
+
+The method should return True if the new node is successfully inserted.
+
+If the index is out of bounds, the method should return False.
+
+
+~~~~~~~~~~~~~~~~~~~~
+LL: Remove
+Implement the remove method for the LinkedList class.
+
+The remove method should take an integer index as a parameter and remove the node at the specified index in the linked list, returning the removed node.
+
+If the index is out of bounds, the method should return None.
+
+Keep in mind the following requirements:
+
+The method should handle edge cases, such as removing a node at the beginning or end of the list.
+
+The method should utilize the pop_first() and pop() methods for handling these edge cases.
+
+The method should use the get() method to find the node previous to the one to be removed.
+
+The method should update the next attribute of the previous node to point to the node after the removed one.
+
+The method should decrement the length attribute of the LinkedList class.
+
+The method should return the removed node if the removal is successful.
+
+If the index is out of bounds, the method should return None.
+
+
+~~~~~~~~~~~~~~~~~~~~
+LL: Reverse
+Implement the reverse method for the LinkedList class.
+
+The reverse method should reverse the order of the nodes in the linked list so that the head becomes the tail and the tail becomes the head.
+
+The method should not create any new nodes or modify the values of the nodes.
+
+The method should only update the next attribute of each node to point to the previous node in the list.
+
+Consider the following requirements while implementing the method:
+
+The method should handle edge cases, such as an empty list or a list with a single node.
+
+The method should utilize a temporary variable to swap the head and tail attributes of the LinkedList class.
+
+The method should use a loop to iterate through the nodes in the list and update the next attribute of each node.
+
+The method should not modify the length attribute of the LinkedList class.
+~~~~~~~~~~~~~~~~~~~~
+
